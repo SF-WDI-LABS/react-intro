@@ -307,7 +307,7 @@ Let's have some practice creating a React component from scratch. How about a bl
 * Render these properties using a Post component.
 * The HTML (or more accurately, JSX) composition of your Post is up to you.
 
-#### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/f1088165898d1a20df956647c8e9b5ed67d9ad32)
+_For the solution, check out the code in the code in `simple-blog-app`._
 
 ---
 
