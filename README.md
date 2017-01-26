@@ -501,7 +501,7 @@ Use a form to take in user input.
 
 > **NOTE:** You're starting to mock Angular's two-way data binding!
 
-_For the solution to blog challenges, check out the code in the code in `simple-blog-app`._
+_For the solution to blog challenges, check out the code in the code in `simple-blog-app-solution`._
 
 ---
 
