@@ -307,7 +307,6 @@ Let's have some practice creating a React component from scratch. How about a bl
 * Render these properties using a Post component.
 * The HTML (or more accurately, JSX) composition of your Post is up to you.
 
-_For the solution, check out the code in the code in `simple-blog-app`._
 
 ---
 
@@ -385,7 +384,7 @@ export default Post;
 >
 > **HINT II:** Remember that whenever you write vanilla Javascript inside of JSX, you need to surround it with single brackets (`{}`).
 
-#### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/d71120b727113d7f7d2305f9d2b91e6948c5dde3)
+
 
 ---
 
@@ -502,7 +501,7 @@ Use a form to take in user input.
 
 > **NOTE:** You're starting to mock Angular's two-way data binding!
 
-#### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/1a6d611e1a12fbe122029a33c5eec9234fc88406)
+_For the solution to blog challenges, check out the code in the code in `simple-blog-app`._
 
 ---
 
