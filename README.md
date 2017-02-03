@@ -12,7 +12,6 @@
 * Explain the component model of web development.
 * Create and render React components in the browser.
 * Pass in data to a React component via `props`.
-* Nest React components.
 * Modify the `state` of a React component through events.
 
 ---
@@ -370,6 +369,8 @@ Whenever we run `.setState`, our component "diff's" the current DOM, and compare
 ---
 
 ## Closing
+
+React, like Angular, is a powerful web framework that allows fast rendering and is a front-end tool. It works mainly in the "views" layer. It is meant to maintain readability, reusability, and performance.
 
 ### What's Next?
 
