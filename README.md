@@ -54,16 +54,14 @@ React can be used agnostically throughout your stack. It's role is just to use d
 
 ## Initial Setup
 
-In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
+In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application. Here's an example of the setup commands:
 
 ```bash
 $ npm i -g create-react-app
-$ create-react-app blog-app
-$ cd blog-app
+$ create-react-app sample-app
+$ cd sample-app
 $ npm run start
 ```
-
-> Here you will begin setting up a blog app that you will continue working on during this lesson's exercises. For demonstration purposes, I will be creating a simple "hello world" app.
 
 After running `$ npm run start`, we can view the app at `http://localhost:3000`
 
@@ -85,15 +83,9 @@ Along with installing the necessary dependencies such as React, ReactDom, Babel 
     └──  logo.svg
 ```
 
-Most of the important files and primarily where we will be working today are in the `/src` directory.
+Most of the important files and primarily where you'll be working in the `/src` directory.
 
-> If you finish up early, review and play with the code in `/src/App.js`, `/src/index.js` and `index.html`
-
----
-
-### Stop / Catch Up / Investigate
-
-Take some time and look at what's been generated. Specifically look in `App.js` and `index.js`/
+If you want to try creating a react app, go ahead and follow the steps above and investigate the code in the `/src/App.js`, `/src/index.js` and `index.html` files.
 
 ---
 
@@ -118,9 +110,9 @@ Take a picture of your work and Slack it to the classroom channel before the exe
 
 ---
 
-### I Do: Hello World - A Very Basic Component
+### Hello World - A Very Basic Component
 
-> No need to follow along with this Hello World example. You will have the chance to implement this yourself when you get to the first Blog exercise.
+> No need to follow along with this Hello World example. You will have the chance to implement this yourself when you get to the blog lab.
 
 The basic unit you'll be working with in ReactJS is a **component**.
 * It sounds like a simple word, but using "components" is a pretty different way of approaching web development.
@@ -176,8 +168,6 @@ Every component has, at minimum, a render method. It generates a **Virtual DOM**
 
 ##### `export default Hello`
 This exposes the Hello class to other files which import from the App.js file. The `default` keyword means that any import that's name doesn't match a named export will default to this. Only one default is allowed per file.
-
-<!-- AM: Better way to phrase `default`? ^^ -->
 
 **Virtual DOM? How is that different from the usual DOM?**
 
@@ -290,107 +280,6 @@ class Hello extends Component {
 
 ---
 
-## Break
-
----
-
-### You Do: A Blog Post 
-
-> 20 minutes exercise. 5 minutes review.
-
-Let's have some practice creating a React component from scratch. How about a blog post?
-* Create a `post` object literal in `src/index.js` that has the below properties.
-  1. `title`
-  2. `author`
-  3. `body`
-  4. `comments` (array of strings)
-* Render these properties using a Post component.
-* The HTML (or more accurately, JSX) composition of your Post is up to you.
-
-
----
-
-### Nested Components 
-
-#### Q: What problems did you encounter when trying to add multiple comments to your Post?
-
-It would be a pain to have to explicitly define every comment inside of `<Post />`, especially if each comment itself had multiple properties.
-* This problem is a tell tale sign that our separation of concerns is being stretched, and its time to break things into a new component.
-
-We can nest Comment components within a Post component.
-* We create these comments the same way we did with posts: `extends Component` and `.render`
-* Then we can reference a comment using `<Comment />` inside of Post's render method.
-
-Let's create a new file for our Comment component, `src/Comment.js`...
-
-```js
-import React, {Component} from 'react'
-
-class Comment extends Component {
-  render () {
-    return (
-      <div>
-        <p>{this.props.body}</p>
-      </div>
-    )
-  }
-}
-
-export default Comment
-```
-
-Then in `src/App.js`, we need to load in our `Comment` component and render it inside of our `Post` component...
-
-```js
-import React, { Component } from 'react';
-// Load in Comment component
-import Comment from './Comment.js'
-import './App.css';
-
-
-class Post extends Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <p>By {this.props.author}</p>
-        <div>
-          <p>{this.props.body}</p>
-        </div>
-        <h3>Comments:</h3>
-        // Render Comment component, passing in data
-        <Comment body={this.props.comments[0]} />
-      </div>
-    );
-  }
-}
-
-export default Post;
-```
-
-> **Note**: We could put all of our code in one file, but it's considered a good practice to break components outs into different files to help practice separation of concerns. The only downside is we have to be extra conscious of remembering to **export / import** each component to where its rendered.
-
----
-
-## You Do: Add Nested Comments To Blog 
-
-> 10 minutes exercise. 5 minutes review.
-
- Amend your `Post`'s render method to include reference to a variable, `comments`, that is equal to the return value of generating multiple `<Comment />` elements. Make sure to pass in the `comment` body as an argument to each `Comment` component. Then render the `comments` some where inside the UI for a `Post`.
-
-> **NOTE:** You can use `.map` in `Post`'s `render` method to avoid having to hard-code all your `Comment`'s. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [here](http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/).
->
-> **HINT I:** You should only have to return one `<Comment />` inside of `.map`.
->
-> **HINT II:** Remember that whenever you write vanilla Javascript inside of JSX, you need to surround it with single brackets (`{}`).
-
-
-
----
-
-## Break 
-
----
 
 ## State 
 
@@ -477,31 +366,6 @@ class Hello extends Component {
 Whenever we run `.setState`, our component "diff's" the current DOM, and compares the Virtual DOM node with the updated state to the current DOM.
 * Only replaces the current DOM with parts that have changed.
 
----
-
-### Exercise: Implement State 
-
-> 15 minutes exercise. 5 minutes review.
-
-Let's implement `state` in our Blog by making `body` a mutable value.
-
-1. Initialize a state using a `constructor()` method for our `Post` to set a initial state. It should create a state value called `body`. Set it to the `body` of your hard-coded `post`.
-2. Modify `Post`'s `render` method so that `body` comes from `state`, not `props`.
-3. Create a `handleClick` method inside `Post` that updates `body` based on a user input.
-  * You should use `setState` somewhere in this method.
-  * How can you get a user input? Keep it simple and start with `prompt`.
-4. Add a button to `Post`'s `render` method that triggers `handleClick`.
-
-#### Bonus I
-
-Use a form to take in user input.
-* The post body should be updated using a method that is triggered by `onSubmit`.
-* One option is to keep track of what the new input is going to be by triggering a method using `onChange` on the `<input>`
-* Another option is to pass an event object to the `onSubmit` method and traverse the DOM from `e.target` to find the `<input>` value.
-
-> **NOTE:** You're starting to mock Angular's two-way data binding!
-
-_For the solution to blog challenges, check out the code in the code in `simple-blog-app-solution`._
 
 ---
 
