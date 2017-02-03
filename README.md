@@ -170,8 +170,6 @@ This exposes the Hello class to other files which import from the App.js file. T
 
 **Virtual DOM? How is that different from the usual DOM?**
 
-![clone](http://i.giphy.com/TlK63EA6F1qRb7lll6M.gif)
-
 The Virtual DOM is a Javascript representation of the actual DOM.
 
 * Because of that, React can keep track of changes in the actual DOM by comparing different instances of the Virtual DOM.
