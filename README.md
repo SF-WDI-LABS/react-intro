@@ -385,5 +385,5 @@ React, like Angular, is a powerful web framework that allows fast rendering and 
 * [Tyler McGinnis' React.js Program](http://www.reactjsprogram.com/)
 * [Raw React: No JSX, Webpack, ES6, etc.](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/)
 * [Integrating React with Backbone](https://blog.engineyard.com/2015/integrating-react-with-backbone)
-* [React DC (Meetup)](http://www.meetup.com/React-DC/)
+* [React SF (Meetup)](https://www.meetup.com/ReactSF/)
 * [React Tic-Tac-Toe (by Jesse Shawl)](https://github.com/jshawl/react-tic-tac-toe)
