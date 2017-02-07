@@ -210,4 +210,26 @@ What language is `<Hello />` written in? **JSX.**
 ---
 
 ## Closing
+<<<<<<< HEAD
 So far, we've learned what React is, what the virtual DOM is in React, and made our first React component (yay!). It's time for a break - in React Intro part 2, we will move on to understand two very essential React topics: `props` and `state`.  
+=======
+
+React, like Angular, is a powerful web framework that allows fast rendering and is a front-end tool. It works mainly in the "views" layer. It is meant to maintain readability, reusability, and performance.
+
+### What's Next?
+
+* [Router](https://github.com/reactjs/react-router)
+* [API/Axios](https://www.npmjs.com/package/axios)
+* [Events](https://facebook.github.io/react/tips/dom-event-listeners.html)
+* [Forms](https://facebook.github.io/react/docs/forms.html)
+
+---
+
+## Additional Reading
+
+* [Tyler McGinnis' React.js Program](http://www.reactjsprogram.com/)
+* [Raw React: No JSX, Webpack, ES6, etc.](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/)
+* [Integrating React with Backbone](https://blog.engineyard.com/2015/integrating-react-with-backbone)
+* [React SF (Meetup)](https://www.meetup.com/ReactSF/)
+* [React Tic-Tac-Toe (by Jesse Shawl)](https://github.com/jshawl/react-tic-tac-toe)
+>>>>>>> ef679fb33faa2e96bda274691b5a197ff239e84f
