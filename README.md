@@ -58,6 +58,14 @@ In order to create a new project and to get our development environment setup, w
 $ npm i -g create-react-app
 $ create-react-app sample-app
 $ cd sample-app
+$ atom .
+```
+
+**Explore the app:** Open the scaffolded application and write down 3 observations and one question you have about the files that you find!
+
+Once you're ready to run the server:
+
+```bash
 $ npm run start
 ```
 
@@ -89,9 +97,9 @@ If you want to try creating a react app, go ahead and follow the steps above and
 
 ## Components
 
-One of the snarky comments made about react when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In react, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
+One of the snarky comments made about react when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In React, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
-### You Do: Identifying Components 
+### You Do: Identifying Components
 
 > 5 minutes exercise. 5 minutes review.
 
@@ -154,6 +162,24 @@ Often times we write out React components in **JSX**.
 
 Let's break down the things we see here...
 
+```js
+// bring in React and Component instance from react
+import React, {Component} from 'react'
+
+// define our Hello component
+class Hello extends Component {
+  // what should the component render
+  render () {
+    // Make sure to return some UI
+    return (
+      <h1>Hello World!</h1>
+    )
+  }
+}
+
+export default Hello
+```
+
 ##### `class Hello`
 This is the component we're creating. In this example, we are creating a "Hello" component.
 
@@ -203,7 +229,7 @@ What language is `<Hello />` written in? **JSX.**
 
 * Similar to XML.
 * When we say `<Hello />`, in plain Javascript we are actually saying `React.DOM.div( null, "Hello world.")`
-  * Basically, a string of React methods that create a virtual DOM node.
+* Basically, a string of React methods that create a virtual DOM node.
 
 > **NOTE:** Whenever you use a self-closing tag in JSX, you **MUST** end it with a `/` like `<Hello />` in the above example.
 
