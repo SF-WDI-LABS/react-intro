@@ -1,4 +1,4 @@
-# Intro to React.js: Part 1
+<img src="https://cloud.githubusercontent.com/assets/6520345/23081189/8962462e-f508-11e6-88f1-4a3fa2ddca99.png" alt="cog" width= "50px"/> # Intro to React.js: Part 1
 
 ---
 
@@ -6,7 +6,9 @@
 
 ---
 
-## Learning Objectives
+## Objectives
+
+Developers will be able to:
 
 * Explain what ReactJS is and where it fits in our applications' stack.
 * Explain the component model of web development.
