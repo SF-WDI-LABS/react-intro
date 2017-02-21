@@ -6,6 +6,11 @@
 
 ---
 
+### Why is this important?
+*This workshop is important because:*
+
+React is another solution to some of our front-end woes. It is a JavaScript *library* (not a framework) that allows us to reframe our pages in terms of the **components** that make it up. React focuses on generating views and managing how much of the DOM needs to change when you change pages.
+
 ## Objectives
 
 Developers will be able to:
@@ -58,8 +63,8 @@ In order to create a new project and to get our development environment setup, w
 
 ```bash
 $ npm i -g create-react-app
-$ create-react-app sample-app
-$ cd sample-app
+$ create-react-app react-sample-app
+$ cd react-sample-app
 $ atom .
 ```
 
