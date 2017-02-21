@@ -242,5 +242,16 @@ What language is `<Hello />` written in? **JSX.**
 
 ---
 
+## Adjust your component
+
+Make your component have a header, a paragraph, and an image. You may build it wrong and get a look at some super helpful React errors! Try to debug on your own, but there is a hint below:
+
+<details>
+  <summary><strong>Hint:</strong></summary>
+
+  Your component must have one parent element. That is, you must have one "root" or top level HTML element that holds all of the rest of the HTML that defines your component.
+
+</details>
+
 ## Closing
 So far, we've learned what React is, what the virtual DOM is in React, and made our first React component (yay!). It's time for a break - in React Intro part 2, we will move on to understand two very essential React topics: `props` and `state`.  
