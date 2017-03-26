@@ -43,7 +43,6 @@ React can be thought of as the "Views" layer.
 
 React can be used agnostically throughout your stack. It's role is just to use data to render a UI. This means that React can also coexist with other Javascript frameworks. Let them handle the models and controllers, and have React sort out the views.
 
----
 
 ## Initial Setup
 
@@ -80,7 +79,7 @@ Most of the important files and primarily where you'll be working in the `/src` 
 
 If you want to try creating a react app, go ahead and follow the steps above and investigate the code in the `/src/App.js`, `/src/index.js` and `index.html` files.
 
----
+
 
 ## Components
 
@@ -101,7 +100,7 @@ As you're drawing this out, think about the following questions...
 
 Take a picture of your work and Slack it to the classroom channel before the exercise is over.
 
----
+
 
 ### Hello World - A Very Basic Component
 
@@ -202,7 +201,7 @@ What language is `<Hello />` written in? **JSX.**
 
 > **NOTE:** Whenever you use a self-closing tag in JSX, you **MUST** end it with a `/` like `<Hello />` in the above example.
 
----
+
 
 ## Closing
 So far, we've learned what React is, what the virtual DOM is in React, and made our first React component (yay!). It's time for a break - in React Intro part 2, we will move on to understand two very essential React topics: `props` and `state`.  
