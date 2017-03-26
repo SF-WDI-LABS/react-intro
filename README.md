@@ -1,18 +1,13 @@
-# Intro to React.js: Part 1
+## ![ygxjdvo6](https://cloud.githubusercontent.com/assets/4304660/24333590/781021ce-120f-11e7-80ce-04c6aece3c7e.jpg) Intro to React.js: Part 1
+<hr>
 
----
-
-![react-logo](./images/react-white-logo.png)
-
----
+Finaly! React is here!
 
 ## Learning Objectives
 
 * Explain what ReactJS is and where it fits in our applications' stack.
 * Explain the component model of web development.
 * Create and render React components in the browser.
-
----
 
 
 ## Framing
@@ -89,7 +84,7 @@ If you want to try creating a react app, go ahead and follow the steps above and
 
 ## Components
 
-One of the snarky comments made about react when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In react, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
+One of the snarky comments made about react when it was first open sourced was "Mnyeahhh!!! You're rethinking established best practices!" Traditionally we're used to a more MVC approach for separation of concerns. In react, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
 ### You Do: Identifying Components 
 
@@ -180,7 +175,7 @@ The Virtual DOM is a Javascript representation of the actual DOM.
 
 > If you're interested in learning more about the Virtual DOM, [check this video out](https://www.youtube.com/watch?v=-DX3vJiqxm4).
 
-So we've created the template for our component. Now let's use `/src/index.js` to load in our new component and render it on the DOM...
+So we've created the template for our component. Now let's use `/src/index.js` to load in our new component and render it on the DOM. change the third import to import `Hello` instead of App. Also change the `<App />` tag to `<Hello />`...
 
 ```js
 import React from 'react'
