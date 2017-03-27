@@ -1,18 +1,13 @@
-# Intro to React.js: Part 1
+# ![GALOGO](https://camo.githubusercontent.com/6ce15b81c1f06d716d753a61f5db22375fa684da/68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67) Intro to React.js: Part 1
 
----
 
-![react-logo](./images/react-white-logo.png)
-
----
+Finally! React is here!
 
 ## Learning Objectives
 
 * Explain what ReactJS is and where it fits in our applications' stack.
 * Explain the component model of web development.
 * Create and render React components in the browser.
-
----
 
 
 ## Framing
@@ -48,7 +43,6 @@ React can be thought of as the "Views" layer.
 
 React can be used agnostically throughout your stack. It's role is just to use data to render a UI. This means that React can also coexist with other Javascript frameworks. Let them handle the models and controllers, and have React sort out the views.
 
----
 
 ## Initial Setup
 
@@ -85,11 +79,11 @@ Most of the important files and primarily where you'll be working in the `/src` 
 
 If you want to try creating a react app, go ahead and follow the steps above and investigate the code in the `/src/App.js`, `/src/index.js` and `index.html` files.
 
----
+
 
 ## Components
 
-One of the snarky comments made about react when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In react, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
+One of the snarky comments made about react when it was first open sourced was "Mnyeahhh!!! You're rethinking established best practices!" Traditionally we're used to a more MVC approach for separation of concerns. In react, we want to move towards more of a component based separation of concerns. When taking a look at Facebook, you could think of each status post as a mini-component in react. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
 ### You Do: Identifying Components 
 
@@ -106,7 +100,7 @@ As you're drawing this out, think about the following questions...
 
 Take a picture of your work and Slack it to the classroom channel before the exercise is over.
 
----
+
 
 ### Hello World - A Very Basic Component
 
@@ -180,7 +174,7 @@ The Virtual DOM is a Javascript representation of the actual DOM.
 
 > If you're interested in learning more about the Virtual DOM, [check this video out](https://www.youtube.com/watch?v=-DX3vJiqxm4).
 
-So we've created the template for our component. Now let's use `/src/index.js` to load in our new component and render it on the DOM...
+So we've created the template for our component. Now let's use `/src/index.js` to load in our new component and render it on the DOM. change the third import to import `Hello` instead of App. Also change the `<App />` tag to `<Hello />`...
 
 ```js
 import React from 'react'
@@ -207,7 +201,7 @@ What language is `<Hello />` written in? **JSX.**
 
 > **NOTE:** Whenever you use a self-closing tag in JSX, you **MUST** end it with a `/` like `<Hello />` in the above example.
 
----
+
 
 ## Closing
 So far, we've learned what React is, what the virtual DOM is in React, and made our first React component (yay!). It's time for a break - in React Intro part 2, we will move on to understand two very essential React topics: `props` and `state`.  
